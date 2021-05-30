@@ -21,6 +21,8 @@ from __future__ import division, print_function
 
 import os
 import logging, math
+from pprint import pprint
+
 import numpy as np
 import pyqtgraph as pg
 
@@ -46,6 +48,8 @@ from argos.utils.cls import array_kind_label
 from argos.utils.defs import RIGHT_ARROW
 from argos.utils.masks import (ArrayWithMask, replaceMaskedValueWithFloat,
                                nanPercentileOfSubsampledArrayWithMask)
+
+from objbrowser import browse
 
 logger = logging.getLogger(__name__)
 
@@ -130,7 +134,7 @@ class PgImageSouthSeaCti(MainGroupCti):
     """ Configuration tree item for a PgImageSouthSeaCti inspector
     """
 
-    def __init__(self, pgImagePlot2d, nodeName):
+    def __init__(self, pgImageSouthSea, nodeName):
         """ Constructor
 
             Maintains a link to the target pgImagePlot2d inspector, so that changes in the
@@ -138,9 +142,9 @@ class PgImageSouthSeaCti(MainGroupCti):
             Vice versa, it can connect signals to the target.
         """
         super(PgImageSouthSeaCti, self).__init__(nodeName)
-        check_class(pgImagePlot2d, PgImageSouthSea)
-        self.pgImagePlot2d = pgImagePlot2d
-        imagePlotItem = self.pgImagePlot2d.imagePlotItem
+        check_class(pgImageSouthSea, PgImageSouthSea)
+        self.pgImageSouthSea = pgImageSouthSea
+        imagePlotItem = self.pgImageSouthSea.imagePlotItem
         viewBox = imagePlotItem.getViewBox()
 
         self.insertChild(
@@ -154,7 +158,7 @@ class PgImageSouthSeaCti(MainGroupCti):
 
         self.xAxisCti = self.insertChild(PgAxisCti('x-axis'))
         self.xAxisCti.insertChild(
-            PgAxisLabelCti(imagePlotItem, 'bottom', self.pgImagePlot2d.collector,
+            PgAxisLabelCti(imagePlotItem, 'bottom', self.pgImageSouthSea.collector,
                            defaultData=1,
                            configValues=[NO_LABEL_STR, "{x-dim} [index]"]))
         self.xFlippedCti = self.xAxisCti.insertChild(PgAxisFlipCti(viewBox, X_AXIS))
@@ -162,7 +166,7 @@ class PgImageSouthSeaCti(MainGroupCti):
 
         self.yAxisCti = self.insertChild(PgAxisCti('y-axis'))
         self.yAxisCti.insertChild(
-            PgAxisLabelCti(imagePlotItem, 'left', self.pgImagePlot2d.collector,
+            PgAxisLabelCti(imagePlotItem, 'left', self.pgImageSouthSea.collector,
                            defaultData=1,
                            configValues=[NO_LABEL_STR, "{y-dim} [index]"]))
         self.yFlippedCti = self.yAxisCti.insertChild(
@@ -174,20 +178,20 @@ class PgImageSouthSeaCti(MainGroupCti):
         self.colorCti = self.insertChild(PgAxisCti('color scale'))
 
         self.colorCti.insertChild(PgColorLegendLabelCti(
-            pgImagePlot2d.colorLegendItem, self.pgImagePlot2d.collector, defaultData=1,
+            pgImageSouthSea.colorLegendItem, self.pgImageSouthSea.collector, defaultData=1,
             configValues=[NO_LABEL_STR, "{name} {unit}", "{path} {unit}",
                           "{name}", "{path}", "{raw-unit}"]))
 
-        self.colorCti.insertChild(PgColorMapCti(self.pgImagePlot2d.colorLegendItem))
+        self.colorCti.insertChild(PgColorMapCti(self.pgImageSouthSea.colorLegendItem))
 
         self.showHistCti = self.colorCti.insertChild(
-            PgShowHistCti(pgImagePlot2d.colorLegendItem))
+            PgShowHistCti(pgImageSouthSea.colorLegendItem))
         self.showDragLinesCti = self.colorCti.insertChild(
-            PgShowDragLinesCti(pgImagePlot2d.colorLegendItem))
+            PgShowDragLinesCti(pgImageSouthSea.colorLegendItem))
 
-        colorAutoRangeFunctions = defaultAutoRangeMethods(self.pgImagePlot2d)
+        colorAutoRangeFunctions = defaultAutoRangeMethods(self.pgImageSouthSea)
         self.colorLegendCti = self.colorCti.insertChild(
-            PgColorLegendCti(pgImagePlot2d.colorLegendItem, colorAutoRangeFunctions,
+            PgColorLegendCti(pgImageSouthSea.colorLegendItem, colorAutoRangeFunctions,
                              nodeName="range"))
 
         # If True, the image is automatically downsampled to match the screen resolution. This
@@ -205,53 +209,53 @@ class PgImageSouthSeaCti(MainGroupCti):
         self.horCrossPlotCti = self.crossPlotGroupCti.insertChild(
             BoolCti('horizontal', False, expanded=False))
 
-        self.horCrossPlotCti.insertChild(PgGridCti(pgImagePlot2d.horCrossPlotItem))
+        self.horCrossPlotCti.insertChild(PgGridCti(pgImageSouthSea.horCrossPlotItem))
         self.horCrossPlotRangeCti = self.horCrossPlotCti.insertChild(
             PgAxisRangeCti(
-                self.pgImagePlot2d.horCrossPlotItem.getViewBox(), Y_AXIS, nodeName="data range",
-                autoRangeFunctions=cross_plot_auto_range_methods(self.pgImagePlot2d, "horizontal")))
+                self.pgImageSouthSea.horCrossPlotItem.getViewBox(), Y_AXIS, nodeName="data range",
+                autoRangeFunctions=cross_plot_auto_range_methods(self.pgImageSouthSea, "horizontal")))
 
         self.verCrossPlotCti = self.crossPlotGroupCti.insertChild(
             BoolCti('vertical', False, expanded=False))
-        self.verCrossPlotCti.insertChild(PgGridCti(pgImagePlot2d.verCrossPlotItem))
+        self.verCrossPlotCti.insertChild(PgGridCti(pgImageSouthSea.verCrossPlotItem))
         self.verCrossPlotRangeCti = self.verCrossPlotCti.insertChild(
             PgAxisRangeCti(
-                self.pgImagePlot2d.verCrossPlotItem.getViewBox(), X_AXIS, nodeName="data range",
-                autoRangeFunctions=cross_plot_auto_range_methods(self.pgImagePlot2d, "vertical")))
+                self.pgImageSouthSea.verCrossPlotItem.getViewBox(), X_AXIS, nodeName="data range",
+                autoRangeFunctions=cross_plot_auto_range_methods(self.pgImageSouthSea, "vertical")))
 
         # Connect signals.
 
         # Use a queued connect to schedule the reset after current events have been processed.
-        self.pgImagePlot2d.colorLegendItem.sigResetColorScale.connect(
+        self.pgImageSouthSea.colorLegendItem.sigResetColorScale.connect(
             self.colorLegendCti.setAutoRangeOn, type=Qt.QueuedConnection)
-        self.pgImagePlot2d.imagePlotItem.sigResetAxis.connect(
+        self.pgImageSouthSea.imagePlotItem.sigResetAxis.connect(
             self.setImagePlotAutoRangeOn, type=Qt.QueuedConnection)
-        self.pgImagePlot2d.horCrossPlotItem.sigResetAxis.connect(
+        self.pgImageSouthSea.horCrossPlotItem.sigResetAxis.connect(
             self.setHorCrossPlotAutoRangeOn, type=Qt.QueuedConnection)
-        self.pgImagePlot2d.verCrossPlotItem.sigResetAxis.connect(
+        self.pgImageSouthSea.verCrossPlotItem.sigResetAxis.connect(
             self.setVerCrossPlotAutoRangeOn, type=Qt.QueuedConnection)
 
         # Also update axis auto range tree items when linked axes are resized
-        horCrossViewBox = self.pgImagePlot2d.horCrossPlotItem.getViewBox()
+        horCrossViewBox = self.pgImageSouthSea.horCrossPlotItem.getViewBox()
         horCrossViewBox.sigRangeChangedManually.connect(self.xAxisRangeCti.setAutoRangeOff)
-        verCrossViewBox = self.pgImagePlot2d.verCrossPlotItem.getViewBox()
+        verCrossViewBox = self.pgImageSouthSea.verCrossPlotItem.getViewBox()
         verCrossViewBox.sigRangeChangedManually.connect(self.yAxisRangeCti.setAutoRangeOff)
 
     def _closeResources(self):
         """ Disconnects signals.
             Is called by self.finalize when the cti is deleted.
         """
-        self.pgImagePlot2d.colorLegendItem.sigResetColorScale.disconnect(
+        self.pgImageSouthSea.colorLegendItem.sigResetColorScale.disconnect(
             self.colorLegendCti.setAutoRangeOn)
 
-        verCrossViewBox = self.pgImagePlot2d.verCrossPlotItem.getViewBox()
+        verCrossViewBox = self.pgImageSouthSea.verCrossPlotItem.getViewBox()
         verCrossViewBox.sigRangeChangedManually.disconnect(self.yAxisRangeCti.setAutoRangeOff)
-        horCrossViewBox = self.pgImagePlot2d.horCrossPlotItem.getViewBox()
+        horCrossViewBox = self.pgImageSouthSea.horCrossPlotItem.getViewBox()
         horCrossViewBox.sigRangeChangedManually.disconnect(self.xAxisRangeCti.setAutoRangeOff)
 
-        self.pgImagePlot2d.verCrossPlotItem.sigResetAxis.disconnect(self.setVerCrossPlotAutoRangeOn)
-        self.pgImagePlot2d.horCrossPlotItem.sigResetAxis.disconnect(self.setHorCrossPlotAutoRangeOn)
-        self.pgImagePlot2d.imagePlotItem.sigResetAxis.disconnect(self.setImagePlotAutoRangeOn)
+        self.pgImageSouthSea.verCrossPlotItem.sigResetAxis.disconnect(self.setVerCrossPlotAutoRangeOn)
+        self.pgImageSouthSea.horCrossPlotItem.sigResetAxis.disconnect(self.setHorCrossPlotAutoRangeOn)
+        self.pgImageSouthSea.imagePlotItem.sigResetAxis.disconnect(self.setImagePlotAutoRangeOn)
 
     def setImagePlotAutoRangeOn(self, axisNumber):
         """ Sets the image plot's auto-range on for the axis with number axisNumber.
@@ -305,7 +309,9 @@ class PgImageSouthSea(AbstractInspector):
         # The image item
         self.imagePlotItem = ArgosPgPlotItem()
         self.viewBox = self.imagePlotItem.getViewBox()
+        print("I like ", np.pi)
         self.viewBox.disableAutoRange(BOTH_AXES)
+        pprint(self.viewBox.background)
 
         self.imageItem = pg.ImageItem()
         self.imageItem.setPos(-0.5, -0.5)  # Center on pixels (see pg.ImageView.setImage source code)
@@ -334,12 +340,13 @@ class PgImageSouthSea(AbstractInspector):
         self.crossLineHorizontal = pg.InfiniteLine(angle=0, movable=False, pen=self.crossPen)
         self.crossLineVertical = pg.InfiniteLine(angle=90, movable=False, pen=self.crossPen)
 
-        self.imagePlotItem.addItem(self.crossLineVerShadow, ignoreBounds=True)
-        self.imagePlotItem.addItem(self.crossLineHorShadow, ignoreBounds=True)
-        self.imagePlotItem.addItem(self.crossLineVertical, ignoreBounds=True)
-        self.imagePlotItem.addItem(self.crossLineHorizontal, ignoreBounds=True)
+        # no change?
+        # self.imagePlotItem.addItem(self.crossLineVerShadow, ignoreBounds=True)
+        # self.imagePlotItem.addItem(self.crossLineHorShadow, ignoreBounds=True)
+        # self.imagePlotItem.addItem(self.crossLineVertical, ignoreBounds=True)
+        # self.imagePlotItem.addItem(self.crossLineHorizontal, ignoreBounds=True)
 
-        self.probeLabel = pg.LabelItem('', justify='left')
+        self.probeLabel = pg.LabelItem('xxxx', justify='left')
 
         # Layout
 
@@ -368,12 +375,14 @@ class PgImageSouthSea(AbstractInspector):
         gridLayout.setColumnStretchFactor(COL_VER_LINE, 1)
 
         # Configuration tree
-        self._config = PgImageSouthSeaCti(pgImagePlot2d=self, nodeName='2D image plot')
+        self._config = PgImageSouthSeaCti(pgImageSouthSea=self, nodeName='2D image plot')
 
         # Connect signals
         # Based mouseMoved on crosshair.py from the PyQtGraph examples directory.
         # I did not use the SignalProxy because I did not see any difference.
         self.imagePlotItem.scene().sigMouseMoved.connect(self.mouseMoved)
+        # self.imagePlotItem.scene()..connect(self.mouseMoved)
+        # browse(locals())
 
     def finalize(self):
         """ Is called before destruction. Can be used to clean-up resources.
@@ -535,7 +544,8 @@ class PgImageSouthSea(AbstractInspector):
 
         self.titleLabel.setText(self.configValue('title').format(**self.collector.rtiInfo))
 
-        # self.config.logBranch()
+        logger.debug("Show Data log with logBranch()")
+        self.config.logBranch()
         self.config.updateTarget()
 
     @QtSlot(object)

@@ -135,7 +135,13 @@
             }
         ]
     },
-    "recentFiles": [],
+    "recentFiles": [
+        [
+            "2021-05-30 21:13:49",
+            "/Users/mingxing/Projects/python/southsea/ww3.199101_hs.nc",
+            ""
+        ]
+    ],
     "windows": {
         "win-0": {
             "configWidget": {
@@ -174,7 +180,7 @@
                                     "subsample": true
                                 }
                             },
-                            "max": 4.8099284172058105,
+                            "max": 1.0,
                             "min": 0.0
                         },
                         "show drag lines": {
@@ -198,8 +204,8 @@
                                             "subsample": true
                                         }
                                     },
-                                    "max": 4.9061269855499265,
-                                    "min": -0.09619856834411622
+                                    "max": 1.0,
+                                    "min": 0.0
                                 },
                                 "grid": {
                                     "_data": true,
@@ -249,8 +255,8 @@
                                             "subsample": true
                                         }
                                     },
-                                    "max": 4.9061269855499265,
-                                    "min": -0.09619856834411622
+                                    "max": 1.0,
+                                    "min": 0.0
                                 },
                                 "grid": {
                                     "_data": true,
@@ -295,12 +301,12 @@
                                     "padding": -1
                                 }
                             },
-                            "max": 310.31405876365886,
-                            "min": -11.314058763658856
+                            "max": 1.0,
+                            "min": 0.0
                         }
                     },
                     "y-axis": {
-                        "flipped": false,
+                        "flipped": true,
                         "label": [
                             1,
                             [
@@ -315,8 +321,8 @@
                                     "padding": -1
                                 }
                             },
-                            "max": 312.9325365919586,
-                            "min": -13.932536591958584
+                            "max": 1.0,
+                            "min": 0.0
                         }
                     }
                 },
@@ -471,8 +477,8 @@
                                     "padding": -1
                                 }
                             },
-                            "max": 313.57349921951504,
-                            "min": -14.573499219515028
+                            "max": 315.73639081333147,
+                            "min": -16.736390813331447
                         }
                     },
                     "y-axis": {
@@ -491,765 +497,15 @@
                                     "padding": -1
                                 }
                             },
-                            "max": 313.15612853864167,
-                            "min": -14.156128538641681
-                        }
-                    }
-                },
-                "table": {
-                    "auto column widths": {
-                        "_data": false,
-                        "_sub": {
-                            "column width": 100
-                        }
-                    },
-                    "auto row heights": {
-                        "_data": false,
-                        "_sub": {
-                            "row height": 30
-                        }
-                    },
-                    "encoding": [
-                        0,
-                        [
-                            "utf-8",
-                            "ascii",
-                            "latin-1",
-                            "windows-1252"
-                        ]
-                    ],
-                    "font": {
-                        "_data": "Courier,13,-1,5,50,0,0,0,0,0",
-                        "_sub": {
-                            "family": 50,
-                            "italic": false,
-                            "size": 13,
-                            "weight": 1
-                        }
-                    },
-                    "format specifiers": {
-                        "integers": [
-                            0,
-                            [
-                                "",
-                                "d",
-                                "n",
-                                "c",
-                                "#b",
-                                "#o",
-                                "#x",
-                                "!r",
-                                "8d",
-                                "#8.4g",
-                                "_<10",
-                                "_>10",
-                                "'int: {}'"
-                            ]
-                        ],
-                        "missing data": [
-                            2,
-                            [
-                                "",
-                                "' '",
-                                "'--'",
-                                "'<masked>'",
-                                "!r"
-                            ]
-                        ],
-                        "other numbers": [
-                            0,
-                            [
-                                "",
-                                "f",
-                                "g",
-                                "n",
-                                "%",
-                                "!r",
-                                "8.3e",
-                                "#8.4g",
-                                "_<15",
-                                "_>15",
-                                "'num: {}'"
-                            ]
-                        ],
-                        "other types": [
-                            0,
-                            [
-                                "",
-                                "!s",
-                                "!r",
-                                "'other: {}'"
-                            ]
-                        ],
-                        "strings": [
-                            0,
-                            [
-                                "",
-                                "s",
-                                "!r",
-                                "!a",
-                                "10.10s",
-                                "_<15s",
-                                "_>15s",
-                                "'str: {}'"
-                            ]
-                        ]
-                    },
-                    "horizontal alignment": 0,
-                    "missing data color": "#b0b0b0",
-                    "scroll": 0,
-                    "separate fields": true,
-                    "text color": "#000000",
-                    "vertical alignment": 1,
-                    "word wrap": false
-                }
-            },
-            "layout": {
-                "collectorHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+sAAAAEAAAAAAAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAEAAACWAAAAAEAAAAAAAAAVgAAAAEAAAAAAAAAVgAAAAEAAAAAAAAA5wAAAAEAAAAAAAAD6AAAAABk",
-                "configTreeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAGOgAAAAQAAAABAAAAZAAAAAMAAABkAAAABAAAAGQAAAAFAAAAZAAAAUAAAAAGAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAGAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACg",
-                "repoWidget": {
-                    "attributesPane": {
-                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAMAAAAAAAAAAAAAAAADBAAAAAEAAAACAAAAMgAAARMAAAADAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAADAAAAfQAAAAEAAAAAAAAAlgAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACW"
-                    },
-                    "propertiesPane": {
-                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAn4AAAACAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAfQAAAAEAAAAAAAACAQAAAAEAAAAAAAAD6AAAAACW"
-                    },
-                    "splitterSizes": [
-                        457,
-                        285
-                    ],
-                    "tabIndex": 1,
-                    "treeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAM5g8AAAAJAAAABwAAAGQAAAABAAAAwwAAAAIAAABkAAAACAAAAGQAAAAJAAAAZAAAAAoAAABkAAAACwAAAGQAAAAFAAAAZAAAAAYAAABkAAABGQAAAAwBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAwAAACnAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAABAAAAAAQAAAAAAAAAyAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAPoAAAAADI="
-                },
-                "winGeom": "AdnQywACAAAAAABFAAAAIgAABVgAAANHAAAARQAAAD4AAAVYAAADRwAAAAAAAAAABaA=",
-                "winState": "AAAA/wAAAAD9AAAAAwAAAAAAAAEcAAADCvwCAAAAAfsAAAAUAGQAbwBjAGsAMgBfAGQAYQB0AGEBAAAAAAAAAwoAAADaAP///wAAAAEAAAEzAAACo/wCAAAAAfsAAAAcAGQAbwBjAGsAMgBfAHMAZQB0AHQAaQBuAGcAcwEAAAAAAAACowAAAIIA////AAAAAwAAA/cAAABm/AEAAAAB+wAAAB4AZABvAGMAawAyAF8AYwBvAGwAbABlAGMAdABvAHIBAAABHQAAA/cAAABQAP///wAAAsMAAAKjAAAAAQAAAAQAAAABAAAACPwAAAAA"
-            }
-        },
-        "win-1": {
-            "configWidget": {
-                "autoRange": true,
-                "resetMode": "ranges"
-            },
-            "curInspector": "",
-            "inspectors": {
-                "imageplot": {
-                    "auto down sample": true,
-                    "color scale": {
-                        "color map": {
-                            "_data": "MatPlotLib/Magma",
-                            "_sub": {
-                                "reversed": false,
-                                "subsample": 1
-                            }
-                        },
-                        "label": [
-                            1,
-                            [
-                                "-- none --",
-                                "{name} {unit}",
-                                "{path} {unit}",
-                                "{name}",
-                                "{path}",
-                                "{raw-unit}"
-                            ]
-                        ],
-                        "range": {
-                            "auto-range": {
-                                "_data": true,
-                                "_sub": {
-                                    "method": 0,
-                                    "padding": 0,
-                                    "subsample": true
-                                }
-                            },
-                            "max": 4.8099284172058105,
-                            "min": 0.0
-                        },
-                        "show drag lines": {
-                            "_data": true,
-                            "_sub": {
-                                "margins": 40
-                            }
-                        },
-                        "show histogram": true
-                    },
-                    "cross-hair": {
-                        "horizontal": {
-                            "_data": false,
-                            "_sub": {
-                                "data range": {
-                                    "auto-range": {
-                                        "_data": true,
-                                        "_sub": {
-                                            "method": 0,
-                                            "padding": -1,
-                                            "subsample": true
-                                        }
-                                    },
-                                    "max": 4.9061269855499265,
-                                    "min": -0.09619856834411622
-                                },
-                                "grid": {
-                                    "_data": true,
-                                    "_sub": {
-                                        "alpha": 0.2,
-                                        "x-axis": true,
-                                        "y-axis": true
-                                    }
-                                }
-                            }
-                        },
-                        "pen": {
-                            "anti-alias": true,
-                            "color": "#ff0066",
-                            "line": {
-                                "_data": true,
-                                "_sub": {
-                                    "shadow": {
-                                        "_data": false,
-                                        "_sub": {
-                                            "color": "#bfbfbf",
-                                            "style": 1,
-                                            "width": 0.0
-                                        }
-                                    },
-                                    "style": 0,
-                                    "width": 1.0
-                                }
-                            },
-                            "symbol": {
-                                "_data": false,
-                                "_sub": {
-                                    "shape": 0,
-                                    "size": 5
-                                }
-                            }
-                        },
-                        "vertical": {
-                            "_data": false,
-                            "_sub": {
-                                "data range": {
-                                    "auto-range": {
-                                        "_data": true,
-                                        "_sub": {
-                                            "method": 0,
-                                            "padding": -1,
-                                            "subsample": true
-                                        }
-                                    },
-                                    "max": 4.9061269855499265,
-                                    "min": -0.09619856834411622
-                                },
-                                "grid": {
-                                    "_data": true,
-                                    "_sub": {
-                                        "alpha": 0.2,
-                                        "x-axis": true,
-                                        "y-axis": true
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "lock aspect ratio": {
-                        "_data": false,
-                        "_sub": {
-                            "ratio": 1.0
-                        }
-                    },
-                    "rectangle zoom mode": false,
-                    "show probe": true,
-                    "title": [
-                        0,
-                        [
-                            "{base-name} -- {name} {slices}",
-                            "{name} {slices}",
-                            "{path} {slices}"
-                        ]
-                    ],
-                    "x-axis": {
-                        "flipped": false,
-                        "label": [
-                            1,
-                            [
-                                "-- none --",
-                                "{x-dim} [index]"
-                            ]
-                        ],
-                        "range": {
-                            "auto-range": {
-                                "_data": true,
-                                "_sub": {
-                                    "padding": -1
-                                }
-                            },
-                            "max": 315.5678423996621,
-                            "min": -16.567842399662087
-                        }
-                    },
-                    "y-axis": {
-                        "flipped": true,
-                        "label": [
-                            1,
-                            [
-                                "-- none --",
-                                "{y-dim} [index]"
-                            ]
-                        ],
-                        "range": {
-                            "auto-range": {
-                                "_data": true,
-                                "_sub": {
-                                    "padding": -1
-                                }
-                            },
-                            "max": 314.1769913033797,
-                            "min": -15.176991303379689
-                        }
-                    }
-                }
-            },
-            "layout": {
-                "collectorHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6UAAAAEAAAAAAAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAEAAACWAAAAAEAAAAAAAAAXgAAAAEAAAAAAAAAcgAAAAEAAAAAAAAAfQAAAAEAAAAAAAAD6AAAAABk",
-                "configTreeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAGOgAAAAQAAAABAAAAZAAAAAMAAABkAAAABAAAAGQAAAAFAAAAZAAAAUAAAAAGAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAGAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACg",
-                "repoWidget": {
-                    "attributesPane": {
-                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAMAAAAAAAAAAAAAAAADBAAAAAEAAAACAAAAMgAAAU4AAAADAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAADAAAAfQAAAAEAAAAAAAAA0QAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACW"
-                    },
-                    "propertiesPane": {
-                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAn4AAAACAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAfQAAAAEAAAAAAAACAQAAAAEAAAAAAAAD6AAAAACW"
-                    },
-                    "splitterSizes": [
-                        409,
-                        255
-                    ],
-                    "tabIndex": 1,
-                    "treeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAM5g8AAAAJAAAABwAAAGQAAAABAAAAZAAAAAIAAABkAAAACAAAAGQAAAAJAAAAZAAAAAoAAABkAAAACwAAAGQAAAAFAAAAZAAAAAYAAABkAAABagAAAAwBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAwAAADIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAABaAAAAAQAAAAAAAABIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAPoAAAAADI="
-                },
-                "winGeom": "AdnQywACAAAAAABFAAAAcAAABVgAAANHAAAARQAAAIwAAAVYAAADRwAAAAAAAAAABaA=",
-                "winState": "AAAA/wAAAAD9AAAAAwAAAAAAAAF2AAACvPwCAAAAAfsAAAAUAGQAbwBjAGsAMgBfAGQAYQB0AGEBAAAAAAAAArwAAADaAP///wAAAAEAAAFKAAACVfwCAAAAAfsAAAAcAGQAbwBjAGsAMgBfAHMAZQB0AHQAaQBuAGcAcwEAAAAAAAACVQAAAIIA////AAAAAwAAA50AAABm/AEAAAAB+wAAAB4AZABvAGMAawAyAF8AYwBvAGwAbABlAGMAdABvAHIBAAABdwAAA50AAABQAP///wAAAlIAAAJVAAAAAQAAAAQAAAABAAAACPwAAAAA"
-            }
-        },
-        "win-2": {
-            "configWidget": {
-                "autoRange": true,
-                "resetMode": "ranges"
-            },
-            "curInspector": "",
-            "inspectors": {
-                "imageplot": {
-                    "auto down sample": true,
-                    "color scale": {
-                        "color map": {
-                            "_data": "MatPlotLib/Magma",
-                            "_sub": {
-                                "reversed": false,
-                                "subsample": 1
-                            }
-                        },
-                        "label": [
-                            1,
-                            [
-                                "-- none --",
-                                "{name} {unit}",
-                                "{path} {unit}",
-                                "{name}",
-                                "{path}",
-                                "{raw-unit}"
-                            ]
-                        ],
-                        "range": {
-                            "auto-range": {
-                                "_data": true,
-                                "_sub": {
-                                    "method": 0,
-                                    "padding": 0,
-                                    "subsample": true
-                                }
-                            },
-                            "max": 4.8099284172058105,
-                            "min": 0.0
-                        },
-                        "show drag lines": {
-                            "_data": true,
-                            "_sub": {
-                                "margins": 40
-                            }
-                        },
-                        "show histogram": true
-                    },
-                    "cross-hair": {
-                        "horizontal": {
-                            "_data": false,
-                            "_sub": {
-                                "data range": {
-                                    "auto-range": {
-                                        "_data": true,
-                                        "_sub": {
-                                            "method": 0,
-                                            "padding": -1,
-                                            "subsample": true
-                                        }
-                                    },
-                                    "max": 4.9061269855499265,
-                                    "min": -0.09619856834411622
-                                },
-                                "grid": {
-                                    "_data": true,
-                                    "_sub": {
-                                        "alpha": 0.2,
-                                        "x-axis": true,
-                                        "y-axis": true
-                                    }
-                                }
-                            }
-                        },
-                        "pen": {
-                            "anti-alias": true,
-                            "color": "#ff0066",
-                            "line": {
-                                "_data": true,
-                                "_sub": {
-                                    "shadow": {
-                                        "_data": false,
-                                        "_sub": {
-                                            "color": "#bfbfbf",
-                                            "style": 1,
-                                            "width": 0.0
-                                        }
-                                    },
-                                    "style": 0,
-                                    "width": 1.0
-                                }
-                            },
-                            "symbol": {
-                                "_data": false,
-                                "_sub": {
-                                    "shape": 0,
-                                    "size": 5
-                                }
-                            }
-                        },
-                        "vertical": {
-                            "_data": false,
-                            "_sub": {
-                                "data range": {
-                                    "auto-range": {
-                                        "_data": true,
-                                        "_sub": {
-                                            "method": 0,
-                                            "padding": -1,
-                                            "subsample": true
-                                        }
-                                    },
-                                    "max": 4.9061269855499265,
-                                    "min": -0.09619856834411622
-                                },
-                                "grid": {
-                                    "_data": true,
-                                    "_sub": {
-                                        "alpha": 0.2,
-                                        "x-axis": true,
-                                        "y-axis": true
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "lock aspect ratio": {
-                        "_data": false,
-                        "_sub": {
-                            "ratio": 1.0
-                        }
-                    },
-                    "rectangle zoom mode": false,
-                    "show probe": true,
-                    "title": [
-                        0,
-                        [
-                            "{base-name} -- {name} {slices}",
-                            "{name} {slices}",
-                            "{path} {slices}"
-                        ]
-                    ],
-                    "x-axis": {
-                        "flipped": false,
-                        "label": [
-                            1,
-                            [
-                                "-- none --",
-                                "{x-dim} [index]"
-                            ]
-                        ],
-                        "range": {
-                            "auto-range": {
-                                "_data": true,
-                                "_sub": {
-                                    "padding": -1
-                                }
-                            },
-                            "max": 315.16841350199167,
-                            "min": -16.168413501991658
-                        }
-                    },
-                    "y-axis": {
-                        "flipped": true,
-                        "label": [
-                            1,
-                            [
-                                "-- none --",
-                                "{y-dim} [index]"
-                            ]
-                        ],
-                        "range": {
-                            "auto-range": {
-                                "_data": true,
-                                "_sub": {
-                                    "padding": -1
-                                }
-                            },
-                            "max": 314.1594581573484,
-                            "min": -15.159458157348405
-                        }
-                    }
-                }
-            },
-            "layout": {
-                "collectorHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6UAAAAEAAAAAAAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAEAAACWAAAAAEAAAAAAAAAXgAAAAEAAAAAAAAAcgAAAAEAAAAAAAAAfQAAAAEAAAAAAAAD6AAAAABk",
-                "configTreeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAGOgAAAAQAAAABAAAAZAAAAAMAAABkAAAABAAAAGQAAAAFAAAAZAAAAUAAAAAGAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAGAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACg",
-                "repoWidget": {
-                    "attributesPane": {
-                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAMAAAAAAAAAAAAAAAADBAAAAAEAAAACAAAAMgAAAU4AAAADAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAADAAAAfQAAAAEAAAAAAAAA0QAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACW"
-                    },
-                    "propertiesPane": {
-                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAn4AAAACAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAfQAAAAEAAAAAAAACAQAAAAEAAAAAAAAD6AAAAACW"
-                    },
-                    "splitterSizes": [
-                        409,
-                        255
-                    ],
-                    "tabIndex": 1,
-                    "treeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAM5g8AAAAJAAAABwAAAGQAAAABAAAAZAAAAAIAAABkAAAACAAAAGQAAAAJAAAAZAAAAAoAAABkAAAACwAAAGQAAAAFAAAAZAAAAAYAAABkAAABagAAAAwBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAwAAADIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAABaAAAAAQAAAAAAAABIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAPoAAAAADI="
-                },
-                "winGeom": "AdnQywACAAAAAABFAAAAcAAABVgAAANHAAAARQAAAIwAAAVYAAADRwAAAAAAAAAABaA=",
-                "winState": "AAAA/wAAAAD9AAAAAwAAAAAAAAF2AAACvPwCAAAAAfsAAAAUAGQAbwBjAGsAMgBfAGQAYQB0AGEBAAAAAAAAArwAAADaAP///wAAAAEAAAFKAAACVfwCAAAAAfsAAAAcAGQAbwBjAGsAMgBfAHMAZQB0AHQAaQBuAGcAcwEAAAAAAAACVQAAAIIA////AAAAAwAAA50AAABm/AEAAAAB+wAAAB4AZABvAGMAawAyAF8AYwBvAGwAbABlAGMAdABvAHIBAAABdwAAA50AAABQAP///wAAAlIAAAJVAAAAAQAAAAQAAAABAAAACPwAAAAA"
-            }
-        },
-        "win-3": {
-            "configWidget": {
-                "autoRange": true,
-                "resetMode": "ranges"
-            },
-            "curInspector": "",
-            "inspectors": {},
-            "layout": {
-                "collectorHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6UAAAAEAAAAAAAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAEAAACWAAAAAEAAAAAAAAAXgAAAAEAAAAAAAAAcgAAAAEAAAAAAAAAfQAAAAEAAAAAAAAD6AAAAABk",
-                "configTreeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAGOgAAAAQAAAABAAAAZAAAAAMAAABkAAAABAAAAGQAAAAFAAAAZAAAAUAAAAAGAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAGAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACg",
-                "repoWidget": {
-                    "attributesPane": {
-                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAMAAAAAAAAAAAAAAAADBAAAAAEAAAACAAAAMgAAAU4AAAADAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAADAAAAfQAAAAEAAAAAAAAA0QAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACW"
-                    },
-                    "propertiesPane": {
-                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAn4AAAACAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAfQAAAAEAAAAAAAACAQAAAAEAAAAAAAAD6AAAAACW"
-                    },
-                    "splitterSizes": [
-                        408,
-                        256
-                    ],
-                    "tabIndex": 1,
-                    "treeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAM5g8AAAAJAAAABwAAAGQAAAABAAAAZAAAAAIAAABkAAAACAAAAGQAAAAJAAAAZAAAAAoAAABkAAAACwAAAGQAAAAFAAAAZAAAAAYAAABkAAABagAAAAwBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAwAAADIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAABaAAAAAQAAAAAAAABIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAPoAAAAADI="
-                },
-                "winGeom": "AdnQywACAAAAAABFAAAAcAAABVgAAANHAAAARQAAAIwAAAVYAAADRwAAAAAAAAAABaA=",
-                "winState": "AAAA/wAAAAD9AAAAAwAAAAAAAAF2AAACvPwCAAAAAfsAAAAUAGQAbwBjAGsAMgBfAGQAYQB0AGEBAAAAAAAAArwAAADaAP///wAAAAEAAAFKAAACVfwCAAAAAfsAAAAcAGQAbwBjAGsAMgBfAHMAZQB0AHQAaQBuAGcAcwEAAAAAAAACVQAAAIIA////AAAAAwAAA50AAABm/AEAAAAB+wAAAB4AZABvAGMAawAyAF8AYwBvAGwAbABlAGMAdABvAHIBAAABdwAAA50AAABQAP///wAAAlIAAAJVAAAAAQAAAAQAAAABAAAACPwAAAAA"
-            }
-        },
-        "win-4": {
-            "configWidget": {
-                "autoRange": true,
-                "resetMode": "ranges"
-            },
-            "curInspector": "image",
-            "inspectors": {
-                "image": {
-                    "auto down sample": true,
-                    "color scale": {
-                        "color map": {
-                            "_data": "MatPlotLib/Magma",
-                            "_sub": {
-                                "reversed": false,
-                                "subsample": 1
-                            }
-                        },
-                        "label": [
-                            1,
-                            [
-                                "-- none --",
-                                "{name} {unit}",
-                                "{path} {unit}",
-                                "{name}",
-                                "{path}",
-                                "{raw-unit}"
-                            ]
-                        ],
-                        "range": {
-                            "auto-range": {
-                                "_data": true,
-                                "_sub": {
-                                    "method": 0,
-                                    "padding": 0,
-                                    "subsample": true
-                                }
-                            },
-                            "max": 4.8099284172058105,
-                            "min": 0.0
-                        },
-                        "show drag lines": {
-                            "_data": true,
-                            "_sub": {
-                                "margins": 40
-                            }
-                        },
-                        "show histogram": true
-                    },
-                    "cross-hair": {
-                        "horizontal": {
-                            "_data": false,
-                            "_sub": {
-                                "data range": {
-                                    "auto-range": {
-                                        "_data": true,
-                                        "_sub": {
-                                            "method": 0,
-                                            "padding": -1,
-                                            "subsample": true
-                                        }
-                                    },
-                                    "max": 4.9061269855499265,
-                                    "min": -0.09619856834411622
-                                },
-                                "grid": {
-                                    "_data": true,
-                                    "_sub": {
-                                        "alpha": 0.2,
-                                        "x-axis": true,
-                                        "y-axis": true
-                                    }
-                                }
-                            }
-                        },
-                        "pen": {
-                            "anti-alias": true,
-                            "color": "#ff0066",
-                            "line": {
-                                "_data": true,
-                                "_sub": {
-                                    "shadow": {
-                                        "_data": false,
-                                        "_sub": {
-                                            "color": "#bfbfbf",
-                                            "style": 1,
-                                            "width": 0.0
-                                        }
-                                    },
-                                    "style": 0,
-                                    "width": 1.0
-                                }
-                            },
-                            "symbol": {
-                                "_data": false,
-                                "_sub": {
-                                    "shape": 0,
-                                    "size": 5
-                                }
-                            }
-                        },
-                        "vertical": {
-                            "_data": false,
-                            "_sub": {
-                                "data range": {
-                                    "auto-range": {
-                                        "_data": true,
-                                        "_sub": {
-                                            "method": 0,
-                                            "padding": -1,
-                                            "subsample": true
-                                        }
-                                    },
-                                    "max": 4.9061269855499265,
-                                    "min": -0.09619856834411622
-                                },
-                                "grid": {
-                                    "_data": true,
-                                    "_sub": {
-                                        "alpha": 0.2,
-                                        "x-axis": true,
-                                        "y-axis": true
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "lock aspect ratio": {
-                        "_data": false,
-                        "_sub": {
-                            "ratio": 1.0
-                        }
-                    },
-                    "rectangle zoom mode": false,
-                    "show probe": true,
-                    "title": [
-                        0,
-                        [
-                            "{base-name} -- {name} {slices}",
-                            "{name} {slices}",
-                            "{path} {slices}"
-                        ]
-                    ],
-                    "x-axis": {
-                        "flipped": false,
-                        "label": [
-                            1,
-                            [
-                                "-- none --",
-                                "{x-dim} [index]"
-                            ]
-                        ],
-                        "range": {
-                            "auto-range": {
-                                "_data": true,
-                                "_sub": {
-                                    "padding": -1
-                                }
-                            },
-                            "max": 315.5678423996621,
-                            "min": -16.567842399662087
-                        }
-                    },
-                    "y-axis": {
-                        "flipped": true,
-                        "label": [
-                            1,
-                            [
-                                "-- none --",
-                                "{y-dim} [index]"
-                            ]
-                        ],
-                        "range": {
-                            "auto-range": {
-                                "_data": true,
-                                "_sub": {
-                                    "padding": -1
-                                }
-                            },
-                            "max": 314.12457954938185,
-                            "min": -15.124579549381847
+                            "max": 314.4144868481503,
+                            "min": -15.414486848150291
                         }
                     }
                 }
             },
             "layout": {
                 "collectorHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5EAAAAEAAAAAAAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAEAAACWAAAAAEAAAAAAAAAVgAAAAEAAAAAAAAAVgAAAAEAAAAAAAAAjQAAAAEAAAAAAAAD6AAAAABk",
-                "configTreeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAGOgAAAAQAAAABAAAAZAAAAAMAAABkAAAABAAAAGQAAAAFAAAAZAAAAUAAAAAGAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAGAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACg",
+                "configTreeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAGOgAAAAQAAAABAAAAZAAAAAMAAABkAAAABQAAAGQAAAAEAAAAZAAAAUAAAAAGAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAGAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACg",
                 "repoWidget": {
                     "attributesPane": {
                         "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAMAAAAAAAAAAAAAAAADBAAAAAEAAAACAAAAMgAAAU4AAAADAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAADAAAAfQAAAAEAAAAAAAAA0QAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACW"
@@ -1262,9 +518,9 @@
                         255
                     ],
                     "tabIndex": 1,
-                    "treeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAM5g8AAAAJAAAABwAAAGQAAAABAAAAZAAAAAIAAABkAAAACAAAAGQAAAAJAAAAZAAAAAoAAABkAAAACwAAAGQAAAAFAAAAZAAAAAYAAABkAAABagAAAAwBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAwAAADIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAABaAAAAAQAAAAAAAABIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAPoAAAAADI="
+                    "treeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAM5g8AAAAJAAAABgAAAGQAAAAJAAAAZAAAAAgAAABkAAAACwAAAGQAAAAKAAAAZAAAAAEAAABkAAAAAgAAAGQAAAAFAAAAZAAAAAcAAABkAAABagAAAAwBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAwAAADIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAABaAAAAAQAAAAAAAABIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAPoAAAAADI="
                 },
-                "winGeom": "AdnQywACAAAAAABFAAAAcAAABVgAAANHAAAARQAAAIwAAAVYAAADRwAAAAAAAAAABaA=",
+                "winGeom": "AdnQywACAAAAAACOAAAAOAAABaEAAAMPAAAAjgAAAFQAAAWhAAADDwAAAAAAAAAABaA=",
                 "winState": "AAAA/wAAAAD9AAAAAwAAAAAAAAF2AAACvPwCAAAAAfsAAAAUAGQAbwBjAGsAMgBfAGQAYQB0AGEBAAAAAAAAArwAAADaAP///wAAAAEAAAFKAAACVfwCAAAAAfsAAAAcAGQAbwBjAGsAMgBfAHMAZQB0AHQAaQBuAGcAcwEAAAAAAAACVQAAAIIA////AAAAAwAAA50AAABm/AEAAAAB+wAAAB4AZABvAGMAawAyAF8AYwBvAGwAbABlAGMAdABvAHIBAAABdwAAA50AAABQAP///wAAAlIAAAJVAAAAAQAAAAQAAAABAAAACPwAAAAA"
             }
         }

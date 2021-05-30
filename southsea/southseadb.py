@@ -2,6 +2,7 @@ import sys
 import os
 import argos
 from argos.main import main, printInspectors
+from objbrowser import browse
 
 
 def run_app():
@@ -21,10 +22,12 @@ def run_app():
         # "-d",  # debugging mode
         "--config-file",
         settings_file,
-        "--open",
-        nc_file,
-        "--select",
-        "/" + nc_file_name + "/hs",
+
+        # "--open",
+        # nc_file,
+        # "--select",
+        # "/" + nc_file_name + "/hs",
+
         "--inspector",
         "Image",
         "--log-config",
@@ -37,3 +40,4 @@ def run_app():
 
     #
     main()
+    # browse(main())

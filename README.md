@@ -28,7 +28,11 @@ https://github.com/h5py/h5py
 
 
 ```shell
+
 conda install pyqt
 conda install -c conda-forge argos
+
+pip install objbrowser
+
 ```
 
