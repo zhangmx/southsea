@@ -11,6 +11,7 @@ def run_app():
 
     this_dir = os.path.dirname(os.path.realpath(__file__))
     log_file = os.path.realpath(os.path.join(this_dir, 'log.json'))
+    css_file = os.path.realpath(os.path.join(this_dir, 'southsea.css'))
     settings_file = os.path.realpath(os.path.join(this_dir, 'settings.json'))
 
     # for debug
@@ -23,15 +24,19 @@ def run_app():
         "--config-file",
         settings_file,
 
-        # "--open",
-        # nc_file,
-        # "--select",
-        # "/" + nc_file_name + "/hs",
+        "--open",
+        nc_file,
+        "--select",
+        "/" + nc_file_name + "/hs",
 
         "--inspector",
         "Image",
         "--log-config",
         log_file,
+
+        "--qss",
+        css_file,
+
         "--log-level",
         "debug"
     ]

@@ -104,12 +104,6 @@
         ],
         "inspectors": [
             {
-                "absClassName": "southsea.inspector.pgplugins.imagesouthsea.PgImageSouthSea",
-                "name": "SouthSea",
-                "pythonPath": "",
-                "shortCut": ""
-            },
-            {
                 "absClassName": "argos.inspector.pgplugins.lineplot1d.PgLinePlot1d",
                 "name": "Line Plot",
                 "pythonPath": "",
@@ -117,7 +111,7 @@
             },
             {
                 "absClassName": "argos.inspector.pgplugins.imageplot2d.PgImagePlot2d",
-                "name": "Image",
+                "name": "Image Plot",
                 "pythonPath": "",
                 "shortCut": "Ctrl+2"
             },
@@ -128,6 +122,12 @@
                 "shortCut": "Ctrl+3"
             },
             {
+                "absClassName": "southsea.inspector.pgplugins.imagesouthsea.PgImageSouthSea",
+                "name": "SouthSea",
+                "pythonPath": "",
+                "shortCut": ""
+            },
+            {
                 "absClassName": "argos.inspector.qtplugins.text.TextInspector",
                 "name": "Text",
                 "pythonPath": "",
@@ -135,13 +135,7 @@
             }
         ]
     },
-    "recentFiles": [
-        [
-            "2021-05-30 21:13:49",
-            "/Users/mingxing/Projects/python/southsea/ww3.199101_hs.nc",
-            ""
-        ]
-    ],
+    "recentFiles": [],
     "windows": {
         "win-0": {
             "configWidget": {
@@ -150,182 +144,6 @@
             },
             "curInspector": "southsea",
             "inspectors": {
-                "image": {
-                    "auto down sample": true,
-                    "color scale": {
-                        "color map": {
-                            "_data": "MatPlotLib/Magma",
-                            "_sub": {
-                                "reversed": false,
-                                "subsample": 1
-                            }
-                        },
-                        "label": [
-                            1,
-                            [
-                                "-- none --",
-                                "{name} {unit}",
-                                "{path} {unit}",
-                                "{name}",
-                                "{path}",
-                                "{raw-unit}"
-                            ]
-                        ],
-                        "range": {
-                            "auto-range": {
-                                "_data": true,
-                                "_sub": {
-                                    "method": 0,
-                                    "padding": 0,
-                                    "subsample": true
-                                }
-                            },
-                            "max": 1.0,
-                            "min": 0.0
-                        },
-                        "show drag lines": {
-                            "_data": true,
-                            "_sub": {
-                                "margins": 40
-                            }
-                        },
-                        "show histogram": true
-                    },
-                    "cross-hair": {
-                        "horizontal": {
-                            "_data": false,
-                            "_sub": {
-                                "data range": {
-                                    "auto-range": {
-                                        "_data": true,
-                                        "_sub": {
-                                            "method": 0,
-                                            "padding": -1,
-                                            "subsample": true
-                                        }
-                                    },
-                                    "max": 1.0,
-                                    "min": 0.0
-                                },
-                                "grid": {
-                                    "_data": true,
-                                    "_sub": {
-                                        "alpha": 0.2,
-                                        "x-axis": true,
-                                        "y-axis": true
-                                    }
-                                }
-                            }
-                        },
-                        "pen": {
-                            "anti-alias": true,
-                            "color": "#ff0066",
-                            "line": {
-                                "_data": true,
-                                "_sub": {
-                                    "shadow": {
-                                        "_data": false,
-                                        "_sub": {
-                                            "color": "#bfbfbf",
-                                            "style": 1,
-                                            "width": 0.0
-                                        }
-                                    },
-                                    "style": 0,
-                                    "width": 1.0
-                                }
-                            },
-                            "symbol": {
-                                "_data": false,
-                                "_sub": {
-                                    "shape": 0,
-                                    "size": 5
-                                }
-                            }
-                        },
-                        "vertical": {
-                            "_data": false,
-                            "_sub": {
-                                "data range": {
-                                    "auto-range": {
-                                        "_data": true,
-                                        "_sub": {
-                                            "method": 0,
-                                            "padding": -1,
-                                            "subsample": true
-                                        }
-                                    },
-                                    "max": 1.0,
-                                    "min": 0.0
-                                },
-                                "grid": {
-                                    "_data": true,
-                                    "_sub": {
-                                        "alpha": 0.2,
-                                        "x-axis": true,
-                                        "y-axis": true
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "lock aspect ratio": {
-                        "_data": false,
-                        "_sub": {
-                            "ratio": 1.0
-                        }
-                    },
-                    "rectangle zoom mode": false,
-                    "show probe": true,
-                    "title": [
-                        0,
-                        [
-                            "{base-name} -- {name} {slices}",
-                            "{name} {slices}",
-                            "{path} {slices}"
-                        ]
-                    ],
-                    "x-axis": {
-                        "flipped": false,
-                        "label": [
-                            1,
-                            [
-                                "-- none --",
-                                "{x-dim} [index]"
-                            ]
-                        ],
-                        "range": {
-                            "auto-range": {
-                                "_data": true,
-                                "_sub": {
-                                    "padding": -1
-                                }
-                            },
-                            "max": 1.0,
-                            "min": 0.0
-                        }
-                    },
-                    "y-axis": {
-                        "flipped": true,
-                        "label": [
-                            1,
-                            [
-                                "-- none --",
-                                "{y-dim} [index]"
-                            ]
-                        ],
-                        "range": {
-                            "auto-range": {
-                                "_data": true,
-                                "_sub": {
-                                    "padding": -1
-                                }
-                            },
-                            "max": 1.0,
-                            "min": 0.0
-                        }
-                    }
-                },
                 "southsea": {
                     "auto down sample": true,
                     "color scale": {
@@ -356,8 +174,8 @@
                                     "subsample": true
                                 }
                             },
-                            "max": 4.8099284172058105,
-                            "min": 0.0
+                            "max": 395.75,
+                            "min": 365.0
                         },
                         "show drag lines": {
                             "_data": true,
@@ -369,7 +187,7 @@
                     },
                     "cross-hair": {
                         "horizontal": {
-                            "_data": false,
+                            "_data": true,
                             "_sub": {
                                 "data range": {
                                     "auto-range": {
@@ -380,8 +198,8 @@
                                             "subsample": true
                                         }
                                     },
-                                    "max": 4.9061269855499265,
-                                    "min": -0.09619856834411622
+                                    "max": 398.825,
+                                    "min": 361.925
                                 },
                                 "grid": {
                                     "_data": true,
@@ -420,7 +238,7 @@
                             }
                         },
                         "vertical": {
-                            "_data": false,
+                            "_data": true,
                             "_sub": {
                                 "data range": {
                                     "auto-range": {
@@ -431,8 +249,8 @@
                                             "subsample": true
                                         }
                                     },
-                                    "max": 5.290921258926391,
-                                    "min": -0.4809928417205811
+                                    "max": 398.7739085203508,
+                                    "min": 361.9760914796492
                                 },
                                 "grid": {
                                     "_data": true,
@@ -477,8 +295,8 @@
                                     "padding": -1
                                 }
                             },
-                            "max": 315.73639081333147,
-                            "min": -16.736390813331447
+                            "max": 0.5705359153418477,
+                            "min": -0.5705359153418477
                         }
                     },
                     "y-axis": {
@@ -497,31 +315,255 @@
                                     "padding": -1
                                 }
                             },
-                            "max": 314.4144868481503,
-                            "min": -15.414486848150291
+                            "max": 261.7601417847512,
+                            "min": -14.76014178475123
                         }
                     }
                 }
             },
             "layout": {
-                "collectorHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5EAAAAEAAAAAAAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAEAAACWAAAAAEAAAAAAAAAVgAAAAEAAAAAAAAAVgAAAAEAAAAAAAAAjQAAAAEAAAAAAAAD6AAAAABk",
-                "configTreeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAGOgAAAAQAAAABAAAAZAAAAAMAAABkAAAABQAAAGQAAAAEAAAAZAAAAUAAAAAGAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAGAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACg",
+                "collectorHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsoAAAADAAAAAAAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAADAAACWAAAAAEAAAAAAAAAOQAAAAEAAAAAAAAAOQAAAAEAAAAAAAAD6AAAAABk",
+                "configTreeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAGOgAAAAQAAAADAAAAZAAAAAEAAABkAAAABAAAAGQAAAAFAAAAZAAAAUAAAAAGAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAGAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACg",
                 "repoWidget": {
                     "attributesPane": {
-                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAMAAAAAAAAAAAAAAAADBAAAAAEAAAACAAAAMgAAAU4AAAADAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAADAAAAfQAAAAEAAAAAAAAA0QAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACW"
+                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAMAAAAAAAAAAAAAAAADBAAAAAEAAAACAAAAMgAAAXAAAAADAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAADAAAAfQAAAAEAAAAAAAAA8wAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACW"
                     },
                     "propertiesPane": {
                         "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAn4AAAACAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAfQAAAAEAAAAAAAACAQAAAAEAAAAAAAAD6AAAAACW"
                     },
                     "splitterSizes": [
-                        409,
-                        255
+                        414,
+                        260
                     ],
                     "tabIndex": 1,
-                    "treeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAM5g8AAAAJAAAABgAAAGQAAAAJAAAAZAAAAAgAAABkAAAACwAAAGQAAAAKAAAAZAAAAAEAAABkAAAAAgAAAGQAAAAFAAAAZAAAAAcAAABkAAABagAAAAwBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAwAAADIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAABaAAAAAQAAAAAAAABIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAPoAAAAADI="
+                    "treeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAM5g8AAAAJAAAACwAAAGQAAAAIAAAAZAAAAAkAAABkAAAAAgAAAGQAAAABAAAAZAAAAAYAAABkAAAABwAAAGQAAAAFAAAAZAAAAAoAAABkAAABdAAAAAwBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAwAAADIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAABaAAAAAQAAAAAAAABSAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAPoAAAAADI="
                 },
-                "winGeom": "AdnQywACAAAAAACOAAAAOAAABaEAAAMPAAAAjgAAAFQAAAWhAAADDwAAAAAAAAAABaA=",
-                "winState": "AAAA/wAAAAD9AAAAAwAAAAAAAAF2AAACvPwCAAAAAfsAAAAUAGQAbwBjAGsAMgBfAGQAYQB0AGEBAAAAAAAAArwAAADaAP///wAAAAEAAAFKAAACVfwCAAAAAfsAAAAcAGQAbwBjAGsAMgBfAHMAZQB0AHQAaQBuAGcAcwEAAAAAAAACVQAAAIIA////AAAAAwAAA50AAABm/AEAAAAB+wAAAB4AZABvAGMAawAyAF8AYwBvAGwAbABlAGMAdABvAHIBAAABdwAAA50AAABQAP///wAAAlIAAAJVAAAAAQAAAAQAAAABAAAACPwAAAAA"
+                "winGeom": "AdnQywACAAAAAABtAAAAUQAABYAAAAMoAAAAbQAAAG0AAAWAAAADKAAAAAAAAAAABaA=",
+                "winState": "AAAA/wAAAAD9AAAAAwAAAAAAAAF2AAACvPwCAAAAAfsAAAAUAGQAbwBjAGsAMgBfAGQAYQB0AGEBAAAAAAAAArwAAADGAP///wAAAAEAAAFKAAACUPwCAAAAAfsAAAAcAGQAbwBjAGsAMgBfAHMAZQB0AHQAaQBuAGcAcwEAAAAAAAACUAAAAHgA////AAAAAwAAA5gAAABm/AEAAAAB+wAAAB4AZABvAGMAawAyAF8AYwBvAGwAbABlAGMAdABvAHIBAAABfAAAA5gAAABGAP///wAAAkgAAAJQAAAAAQAAAAQAAAABAAAACPwAAAAA"
+            }
+        },
+        "win-1": {
+            "configWidget": {
+                "autoRange": true,
+                "resetMode": "ranges"
+            },
+            "curInspector": "",
+            "inspectors": {},
+            "layout": {
+                "collectorHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6UAAAAEAAAAAAAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAEAAACWAAAAAEAAAAAAAAAXgAAAAEAAAAAAAAAcgAAAAEAAAAAAAAAfQAAAAEAAAAAAAAD6AAAAABk",
+                "configTreeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAGOgAAAAQAAAADAAAAZAAAAAEAAABkAAAABAAAAGQAAAAFAAAAZAAAAUgAAAAGAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAGAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAqAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACg",
+                "repoWidget": {
+                    "attributesPane": {
+                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAMAAAAAAAAAAAAAAAADBAAAAAEAAAACAAAAMgAAAXAAAAADAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAADAAAAfQAAAAEAAAAAAAAA8wAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACW"
+                    },
+                    "propertiesPane": {
+                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAn4AAAACAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAfQAAAAEAAAAAAAACAQAAAAEAAAAAAAAD6AAAAACW"
+                    },
+                    "splitterSizes": [
+                        415,
+                        259
+                    ],
+                    "tabIndex": 1,
+                    "treeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAM5g8AAAAJAAAACwAAAGQAAAAIAAAAZAAAAAkAAABkAAAAAgAAAGQAAAABAAAAZAAAAAYAAABkAAAABwAAAGQAAAAFAAAAZAAAAAoAAABkAAABdAAAAAwBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAwAAADIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAABaAAAAAQAAAAAAAABSAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAPoAAAAADI="
+                },
+                "winGeom": "AdnQywACAAAAAABFAAAAcAAABVgAAANHAAAARQAAAIwAAAVYAAADRwAAAAAAAAAABaA=",
+                "winState": "AAAA/wAAAAD9AAAAAwAAAAAAAAF2AAACvPwCAAAAAfsAAAAUAGQAbwBjAGsAMgBfAGQAYQB0AGEBAAAAAAAAArwAAADGAP///wAAAAEAAAFKAAACUPwCAAAAAfsAAAAcAGQAbwBjAGsAMgBfAHMAZQB0AHQAaQBuAGcAcwEAAAAAAAACUAAAAHgA////AAAAAwAAA5gAAABm/AEAAAAB+wAAAB4AZABvAGMAawAyAF8AYwBvAGwAbABlAGMAdABvAHIBAAABfAAAA5gAAABGAP///wAAAkgAAAJQAAAAAQAAAAQAAAABAAAACPwAAAAA"
+            }
+        },
+        "win-2": {
+            "configWidget": {
+                "autoRange": true,
+                "resetMode": "ranges"
+            },
+            "curInspector": "",
+            "inspectors": {},
+            "layout": {
+                "collectorHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6UAAAAEAAAAAAAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAEAAACWAAAAAEAAAAAAAAAXgAAAAEAAAAAAAAAcgAAAAEAAAAAAAAAfQAAAAEAAAAAAAAD6AAAAABk",
+                "configTreeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAGOgAAAAQAAAADAAAAZAAAAAEAAABkAAAABAAAAGQAAAAFAAAAZAAAAUgAAAAGAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAGAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAqAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACg",
+                "repoWidget": {
+                    "attributesPane": {
+                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAMAAAAAAAAAAAAAAAADBAAAAAEAAAACAAAAMgAAAXAAAAADAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAADAAAAfQAAAAEAAAAAAAAA8wAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACW"
+                    },
+                    "propertiesPane": {
+                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAn4AAAACAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAfQAAAAEAAAAAAAACAQAAAAEAAAAAAAAD6AAAAACW"
+                    },
+                    "splitterSizes": [
+                        415,
+                        259
+                    ],
+                    "tabIndex": 1,
+                    "treeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAM5g8AAAAJAAAACwAAAGQAAAAIAAAAZAAAAAkAAABkAAAAAgAAAGQAAAABAAAAZAAAAAYAAABkAAAABwAAAGQAAAAFAAAAZAAAAAoAAABkAAABdAAAAAwBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAwAAADIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAABaAAAAAQAAAAAAAABSAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAPoAAAAADI="
+                },
+                "winGeom": "AdnQywACAAAAAACMAAAAdgAABZ8AAANNAAAAjAAAAJIAAAWfAAADTQAAAAAAAAAABaA=",
+                "winState": "AAAA/wAAAAD9AAAAAwAAAAAAAAF2AAACvPwCAAAAAfsAAAAUAGQAbwBjAGsAMgBfAGQAYQB0AGEBAAAAAAAAArwAAADGAP///wAAAAEAAAFKAAACUPwCAAAAAfsAAAAcAGQAbwBjAGsAMgBfAHMAZQB0AHQAaQBuAGcAcwEAAAAAAAACUAAAAHgA////AAAAAwAAA5gAAABm/AEAAAAB+wAAAB4AZABvAGMAawAyAF8AYwBvAGwAbABlAGMAdABvAHIBAAABfAAAA5gAAABGAP///wAAAkgAAAJQAAAAAQAAAAQAAAABAAAACPwAAAAA"
+            }
+        },
+        "win-3": {
+            "configWidget": {
+                "autoRange": true,
+                "resetMode": "ranges"
+            },
+            "curInspector": "",
+            "inspectors": {},
+            "layout": {
+                "collectorHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6UAAAAEAAAAAAAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAEAAACWAAAAAEAAAAAAAAAXgAAAAEAAAAAAAAAcgAAAAEAAAAAAAAAfQAAAAEAAAAAAAAD6AAAAABk",
+                "configTreeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAGOgAAAAQAAAADAAAAZAAAAAEAAABkAAAABAAAAGQAAAAFAAAAZAAAAUgAAAAGAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAGAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAqAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACg",
+                "repoWidget": {
+                    "attributesPane": {
+                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAMAAAAAAAAAAAAAAAADBAAAAAEAAAACAAAAMgAAAXAAAAADAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAADAAAAfQAAAAEAAAAAAAAA8wAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACW"
+                    },
+                    "propertiesPane": {
+                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAn4AAAACAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAfQAAAAEAAAAAAAACAQAAAAEAAAAAAAAD6AAAAACW"
+                    },
+                    "splitterSizes": [
+                        415,
+                        259
+                    ],
+                    "tabIndex": 1,
+                    "treeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAM5g8AAAAJAAAACwAAAGQAAAAIAAAAZAAAAAkAAABkAAAAAgAAAGQAAAABAAAAZAAAAAYAAABkAAAABwAAAGQAAAAFAAAAZAAAAAoAAABkAAABdAAAAAwBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAwAAADIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAABaAAAAAQAAAAAAAABSAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAPoAAAAADI="
+                },
+                "winGeom": "AdnQywACAAAAAABFAAAAcAAABVgAAANHAAAARQAAAIwAAAVYAAADRwAAAAAAAAAABaA=",
+                "winState": "AAAA/wAAAAD9AAAAAwAAAAAAAAF2AAACvPwCAAAAAfsAAAAUAGQAbwBjAGsAMgBfAGQAYQB0AGEBAAAAAAAAArwAAADGAP///wAAAAEAAAFKAAACUPwCAAAAAfsAAAAcAGQAbwBjAGsAMgBfAHMAZQB0AHQAaQBuAGcAcwEAAAAAAAACUAAAAHgA////AAAAAwAAA5gAAABm/AEAAAAB+wAAAB4AZABvAGMAawAyAF8AYwBvAGwAbABlAGMAdABvAHIBAAABfAAAA5gAAABGAP///wAAAkgAAAJQAAAAAQAAAAQAAAABAAAACPwAAAAA"
+            }
+        },
+        "win-4": {
+            "configWidget": {
+                "autoRange": true,
+                "resetMode": "ranges"
+            },
+            "curInspector": "",
+            "inspectors": {},
+            "layout": {
+                "collectorHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6UAAAAEAAAAAAAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAEAAACWAAAAAEAAAAAAAAAXgAAAAEAAAAAAAAAcgAAAAEAAAAAAAAAfQAAAAEAAAAAAAAD6AAAAABk",
+                "configTreeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAGOgAAAAQAAAADAAAAZAAAAAEAAABkAAAABAAAAGQAAAAFAAAAZAAAAUgAAAAGAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAGAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAqAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACg",
+                "repoWidget": {
+                    "attributesPane": {
+                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAMAAAAAAAAAAAAAAAADBAAAAAEAAAACAAAAMgAAAXAAAAADAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAADAAAAfQAAAAEAAAAAAAAA8wAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACW"
+                    },
+                    "propertiesPane": {
+                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAn4AAAACAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAfQAAAAEAAAAAAAACAQAAAAEAAAAAAAAD6AAAAACW"
+                    },
+                    "splitterSizes": [
+                        415,
+                        259
+                    ],
+                    "tabIndex": 1,
+                    "treeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAM5g8AAAAJAAAACwAAAGQAAAAIAAAAZAAAAAkAAABkAAAAAgAAAGQAAAABAAAAZAAAAAYAAABkAAAABwAAAGQAAAAFAAAAZAAAAAoAAABkAAABdAAAAAwBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAwAAADIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAABaAAAAAQAAAAAAAABSAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAPoAAAAADI="
+                },
+                "winGeom": "AdnQywACAAAAAABFAAAAcAAABVgAAANHAAAARQAAAIwAAAVYAAADRwAAAAAAAAAABaA=",
+                "winState": "AAAA/wAAAAD9AAAAAwAAAAAAAAF2AAACvPwCAAAAAfsAAAAUAGQAbwBjAGsAMgBfAGQAYQB0AGEBAAAAAAAAArwAAADGAP///wAAAAEAAAFKAAACUPwCAAAAAfsAAAAcAGQAbwBjAGsAMgBfAHMAZQB0AHQAaQBuAGcAcwEAAAAAAAACUAAAAHgA////AAAAAwAAA5gAAABm/AEAAAAB+wAAAB4AZABvAGMAawAyAF8AYwBvAGwAbABlAGMAdABvAHIBAAABfAAAA5gAAABGAP///wAAAkgAAAJQAAAAAQAAAAQAAAABAAAACPwAAAAA"
+            }
+        },
+        "win-5": {
+            "configWidget": {
+                "autoRange": true,
+                "resetMode": "ranges"
+            },
+            "curInspector": "",
+            "inspectors": {},
+            "layout": {
+                "collectorHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6UAAAAEAAAAAAAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAEAAACWAAAAAEAAAAAAAAAXgAAAAEAAAAAAAAAcgAAAAEAAAAAAAAAfQAAAAEAAAAAAAAD6AAAAABk",
+                "configTreeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAGOgAAAAQAAAADAAAAZAAAAAEAAABkAAAABAAAAGQAAAAFAAAAZAAAAUgAAAAGAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAGAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAqAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACg",
+                "repoWidget": {
+                    "attributesPane": {
+                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAMAAAAAAAAAAAAAAAADBAAAAAEAAAACAAAAMgAAAXAAAAADAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAADAAAAfQAAAAEAAAAAAAAA8wAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACW"
+                    },
+                    "propertiesPane": {
+                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAn4AAAACAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAfQAAAAEAAAAAAAACAQAAAAEAAAAAAAAD6AAAAACW"
+                    },
+                    "splitterSizes": [
+                        415,
+                        259
+                    ],
+                    "tabIndex": 1,
+                    "treeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAM5g8AAAAJAAAACwAAAGQAAAAIAAAAZAAAAAkAAABkAAAAAgAAAGQAAAABAAAAZAAAAAYAAABkAAAABwAAAGQAAAAFAAAAZAAAAAoAAABkAAABdAAAAAwBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAwAAADIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAABaAAAAAQAAAAAAAABSAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAPoAAAAADI="
+                },
+                "winGeom": "AdnQywACAAAAAABFAAAAcAAABVgAAANHAAAARQAAAIwAAAVYAAADRwAAAAAAAAAABaA=",
+                "winState": "AAAA/wAAAAD9AAAAAwAAAAAAAAF2AAACvPwCAAAAAfsAAAAUAGQAbwBjAGsAMgBfAGQAYQB0AGEBAAAAAAAAArwAAADGAP///wAAAAEAAAFKAAACUPwCAAAAAfsAAAAcAGQAbwBjAGsAMgBfAHMAZQB0AHQAaQBuAGcAcwEAAAAAAAACUAAAAHgA////AAAAAwAAA5gAAABm/AEAAAAB+wAAAB4AZABvAGMAawAyAF8AYwBvAGwAbABlAGMAdABvAHIBAAABfAAAA5gAAABGAP///wAAAkgAAAJQAAAAAQAAAAQAAAABAAAACPwAAAAA"
+            }
+        },
+        "win-6": {
+            "configWidget": {
+                "autoRange": true,
+                "resetMode": "ranges"
+            },
+            "curInspector": "",
+            "inspectors": {},
+            "layout": {
+                "collectorHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6UAAAAEAAAAAAAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAEAAACWAAAAAEAAAAAAAAAXgAAAAEAAAAAAAAAcgAAAAEAAAAAAAAAfQAAAAEAAAAAAAAD6AAAAABk",
+                "configTreeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAGOgAAAAQAAAADAAAAZAAAAAEAAABkAAAABAAAAGQAAAAFAAAAZAAAAUgAAAAGAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAGAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAqAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACg",
+                "repoWidget": {
+                    "attributesPane": {
+                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAMAAAAAAAAAAAAAAAADBAAAAAEAAAACAAAAMgAAAXAAAAADAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAADAAAAfQAAAAEAAAAAAAAA8wAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACW"
+                    },
+                    "propertiesPane": {
+                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAn4AAAACAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAfQAAAAEAAAAAAAACAQAAAAEAAAAAAAAD6AAAAACW"
+                    },
+                    "splitterSizes": [
+                        415,
+                        259
+                    ],
+                    "tabIndex": 1,
+                    "treeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAM5g8AAAAJAAAACwAAAGQAAAAIAAAAZAAAAAkAAABkAAAAAgAAAGQAAAABAAAAZAAAAAYAAABkAAAABwAAAGQAAAAFAAAAZAAAAAoAAABkAAABdAAAAAwBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAwAAADIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAABaAAAAAQAAAAAAAABSAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAPoAAAAADI="
+                },
+                "winGeom": "AdnQywACAAAAAABFAAAAcAAABVgAAANHAAAARQAAAIwAAAVYAAADRwAAAAAAAAAABaA=",
+                "winState": "AAAA/wAAAAD9AAAAAwAAAAAAAAF2AAACvPwCAAAAAfsAAAAUAGQAbwBjAGsAMgBfAGQAYQB0AGEBAAAAAAAAArwAAADGAP///wAAAAEAAAFKAAACUPwCAAAAAfsAAAAcAGQAbwBjAGsAMgBfAHMAZQB0AHQAaQBuAGcAcwEAAAAAAAACUAAAAHgA////AAAAAwAAA5gAAABm/AEAAAAB+wAAAB4AZABvAGMAawAyAF8AYwBvAGwAbABlAGMAdABvAHIBAAABfAAAA5gAAABGAP///wAAAkgAAAJQAAAAAQAAAAQAAAABAAAACPwAAAAA"
+            }
+        },
+        "win-7": {
+            "configWidget": {
+                "autoRange": true,
+                "resetMode": "ranges"
+            },
+            "curInspector": "",
+            "inspectors": {},
+            "layout": {
+                "collectorHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6UAAAAEAAAAAAAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAEAAACWAAAAAEAAAAAAAAAXgAAAAEAAAAAAAAAcgAAAAEAAAAAAAAAfQAAAAEAAAAAAAAD6AAAAABk",
+                "configTreeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAGOgAAAAQAAAADAAAAZAAAAAEAAABkAAAABAAAAGQAAAAFAAAAZAAAAUgAAAAGAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAGAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAqAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACg",
+                "repoWidget": {
+                    "attributesPane": {
+                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAMAAAAAAAAAAAAAAAADBAAAAAEAAAACAAAAMgAAAXAAAAADAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAADAAAAfQAAAAEAAAAAAAAA8wAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACW"
+                    },
+                    "propertiesPane": {
+                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAn4AAAACAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAfQAAAAEAAAAAAAACAQAAAAEAAAAAAAAD6AAAAACW"
+                    },
+                    "splitterSizes": [
+                        415,
+                        259
+                    ],
+                    "tabIndex": 1,
+                    "treeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAM5g8AAAAJAAAACwAAAGQAAAAIAAAAZAAAAAkAAABkAAAAAgAAAGQAAAABAAAAZAAAAAYAAABkAAAABwAAAGQAAAAFAAAAZAAAAAoAAABkAAABdAAAAAwBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAwAAADIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAABaAAAAAQAAAAAAAABSAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAPoAAAAADI="
+                },
+                "winGeom": "AdnQywACAAAAAABFAAAAcAAABVgAAANHAAAARQAAAIwAAAVYAAADRwAAAAAAAAAABaA=",
+                "winState": "AAAA/wAAAAD9AAAAAwAAAAAAAAF2AAACvPwCAAAAAfsAAAAUAGQAbwBjAGsAMgBfAGQAYQB0AGEBAAAAAAAAArwAAADGAP///wAAAAEAAAFKAAACUPwCAAAAAfsAAAAcAGQAbwBjAGsAMgBfAHMAZQB0AHQAaQBuAGcAcwEAAAAAAAACUAAAAHgA////AAAAAwAAA5gAAABm/AEAAAAB+wAAAB4AZABvAGMAawAyAF8AYwBvAGwAbABlAGMAdABvAHIBAAABfAAAA5gAAABGAP///wAAAkgAAAJQAAAAAQAAAAQAAAABAAAACPwAAAAA"
+            }
+        },
+        "win-8": {
+            "configWidget": {
+                "autoRange": true,
+                "resetMode": "ranges"
+            },
+            "curInspector": "",
+            "inspectors": {},
+            "layout": {
+                "collectorHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6UAAAAEAAAAAAAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAEAAACWAAAAAEAAAAAAAAAXgAAAAEAAAAAAAAAcgAAAAEAAAAAAAAAfQAAAAEAAAAAAAAD6AAAAABk",
+                "configTreeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAGOgAAAAQAAAADAAAAZAAAAAEAAABkAAAABAAAAGQAAAAFAAAAZAAAAUAAAAAGAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAGAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAoAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACg",
+                "repoWidget": {
+                    "attributesPane": {
+                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAMAAAAAAAAAAAAAAAADBAAAAAEAAAACAAAAMgAAAWYAAAADAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAADAAAAfQAAAAEAAAAAAAAA6QAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAACW"
+                    },
+                    "propertiesPane": {
+                        "tableHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAn4AAAACAAEBAQAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAACAAAAfQAAAAEAAAAAAAACAQAAAAEAAAAAAAAD6AAAAACW"
+                    },
+                    "splitterSizes": [
+                        415,
+                        259
+                    ],
+                    "tabIndex": 1,
+                    "treeHeaders": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAM5g8AAAAJAAAACwAAAGQAAAAIAAAAZAAAAAkAAABkAAAAAgAAAGQAAAABAAAAZAAAAAYAAABkAAAABwAAAGQAAAAFAAAAZAAAAAoAAABkAAABagAAAAwBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAwAAADIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAABaAAAAAQAAAAAAAABIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAPoAAAAADI="
+                },
+                "winGeom": "AdnQywACAAAAAABFAAAAcAAABVgAAANHAAAARQAAAIwAAAVYAAADRwAAAAAAAAAABaA=",
+                "winState": "AAAA/wAAAAD9AAAAAwAAAAAAAAFsAAACvPwCAAAAAfsAAAAUAGQAbwBjAGsAMgBfAGQAYQB0AGEBAAAAAAAAArwAAADGAP///wAAAAEAAAFAAAACVfwCAAAAAfsAAAAcAGQAbwBjAGsAMgBfAHMAZQB0AHQAaQBuAGcAcwEAAAAAAAACVQAAAHgA////AAAAAwAAA6IAAABh/AEAAAAB+wAAAB4AZABvAGMAawAyAF8AYwBvAGwAbABlAGMAdABvAHIBAAABcgAAA6IAAABGAP///wAAAlwAAAJVAAAAAQAAAAQAAAABAAAACPwAAAAA"
             }
         }
     }

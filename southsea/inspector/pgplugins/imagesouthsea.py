@@ -29,6 +29,8 @@ import pyqtgraph as pg
 from functools import partial
 from collections import OrderedDict
 
+from PyQt5.QtGui import QPixmap
+from PyQt5.QtWidgets import QGraphicsPixmapItem
 from argos.info import DEBUGGING
 from argos.config.boolcti import BoolCti, BoolGroupCti
 from argos.config.choicecti import ChoiceCti
@@ -59,6 +61,11 @@ ROW_HOR_LINE, COL_HOR_LINE = 1, 0
 ROW_IMAGE, COL_IMAGE = 2, 0
 ROW_VER_LINE, COL_VER_LINE = 2, 1
 ROW_PROBE, COL_PROBE = 3, 0  # colspan = 2
+
+
+def get_background_image():
+    this_dir = os.path.dirname(os.path.realpath(__file__))
+    return os.path.realpath(os.path.join(this_dir, '../../southsea.jpg'))
 
 
 def calc_pg_image_plot2d_data_range(pgImagePlot2d, percentage, crossPlot, subsample):
@@ -146,6 +153,8 @@ class PgImageSouthSeaCti(MainGroupCti):
         self.pgImageSouthSea = pgImageSouthSea
         imagePlotItem = self.pgImageSouthSea.imagePlotItem
         viewBox = imagePlotItem.getViewBox()
+        # pprint(self.imagePlotItem)
+        # pprint(self.viewBox)
 
         self.insertChild(
             ChoiceCti('title', 0, editable=True,
@@ -298,6 +307,7 @@ class PgImageSouthSea(AbstractInspector):
         """ Constructor. See AbstractInspector constructor for parameters.
         """
         super(PgImageSouthSea, self).__init__(collector, parent=parent)
+        # pprint(collector)
 
         # The sliced array is kept in memory. This may be different per inspector, e.g. 3D
         # inspectors may decide that this uses to much memory. The slice is therefor not stored
@@ -308,8 +318,13 @@ class PgImageSouthSea(AbstractInspector):
 
         # The image item
         self.imagePlotItem = ArgosPgPlotItem()
+        # self.imagePlotItem.setStyleSheet(
+        #     "background-image: url(" + get_background_image() + "); background-attachment: fixed")
         self.viewBox = self.imagePlotItem.getViewBox()
-        print("I like ", np.pi)
+        # self.viewBox.setStyleSheet(
+        #     "background-image: url(" + get_background_image() + "); background-attachment: fixed")
+
+        # print("I like ", np.pi)
         self.viewBox.disableAutoRange(BOTH_AXES)
         pprint(self.viewBox.background)
 
@@ -341,10 +356,10 @@ class PgImageSouthSea(AbstractInspector):
         self.crossLineVertical = pg.InfiniteLine(angle=90, movable=False, pen=self.crossPen)
 
         # no change?
-        # self.imagePlotItem.addItem(self.crossLineVerShadow, ignoreBounds=True)
-        # self.imagePlotItem.addItem(self.crossLineHorShadow, ignoreBounds=True)
-        # self.imagePlotItem.addItem(self.crossLineVertical, ignoreBounds=True)
-        # self.imagePlotItem.addItem(self.crossLineHorizontal, ignoreBounds=True)
+        self.imagePlotItem.addItem(self.crossLineVerShadow, ignoreBounds=True)
+        self.imagePlotItem.addItem(self.crossLineHorShadow, ignoreBounds=True)
+        self.imagePlotItem.addItem(self.crossLineVertical, ignoreBounds=True)
+        self.imagePlotItem.addItem(self.crossLineHorizontal, ignoreBounds=True)
 
         self.probeLabel = pg.LabelItem('xxxx', justify='left')
 
@@ -364,6 +379,8 @@ class PgImageSouthSea(AbstractInspector):
         self.graphicsLayoutWidget.addItem(self.imagePlotItem, ROW_IMAGE, COL_IMAGE)
         self.graphicsLayoutWidget.addItem(self.probeLabel, ROW_PROBE, COL_PROBE, colspan=3)
 
+        # TODO 新增的 基于时间的 line plot 放这个地方
+
         gridLayout = self.graphicsLayoutWidget.ci.layout  # A QGraphicsGridLayout
         gridLayout.setHorizontalSpacing(10)
         gridLayout.setVerticalSpacing(10)
@@ -375,14 +392,30 @@ class PgImageSouthSea(AbstractInspector):
         gridLayout.setColumnStretchFactor(COL_VER_LINE, 1)
 
         # Configuration tree
-        self._config = PgImageSouthSeaCti(pgImageSouthSea=self, nodeName='2D image plot')
+        self._config = PgImageSouthSeaCti(pgImageSouthSea=self, nodeName='south sea image plot')
 
         # Connect signals
         # Based mouseMoved on crosshair.py from the PyQtGraph examples directory.
         # I did not use the SignalProxy because I did not see any difference.
         self.imagePlotItem.scene().sigMouseMoved.connect(self.mouseMoved)
-        # self.imagePlotItem.scene()..connect(self.mouseMoved)
+        self.imagePlotItem.scene().sigMouseClicked.connect(self.mouseClick)
+
+        tempImg = QPixmap(get_background_image())
+        self.graphicsPixmapItem = QGraphicsPixmapItem(tempImg)
+        # _scene = self.imagePlotItem.scene()
+        _scene = self.viewBox.scene()
+
+        # _scene.addItem(self.graphicsPixmapItem)
+        #
+        # pprint(_scene)
         # browse(locals())
+        # self.imagePlotItem.setObjectName("imageMainPlot")
+        self.viewBox.setObjectName("imageMainPlot")
+        # self.imagePlotItem.setStyleSheet(
+        #     "background-image: url(" + get_background_image() + "); background-attachment: fixed")
+
+        # self.viewBox.setStyleSheet(
+        #     "background-image: url(" + get_background_image() + "); background-attachment: fixed")
 
     def finalize(self):
         """ Is called before destruction. Can be used to clean-up resources.
@@ -390,6 +423,8 @@ class PgImageSouthSea(AbstractInspector):
         logger.debug("Finalizing: {}".format(self))
         self.colorLegendItem.finalize()
         self.imagePlotItem.scene().sigMouseMoved.disconnect(self.mouseMoved)
+        self.imagePlotItem.scene().sigMouseClicked.disconnect(self.mouseClick)
+
         self.imagePlotItem.close()
         self.graphicsLayoutWidget.close()
 
@@ -415,8 +450,8 @@ class PgImageSouthSea(AbstractInspector):
         # Unfortunately PyQtGraph doesn't emit this signal when the image is cleared.
         self.imageItem.sigImageChanged.emit()
 
-        self.imagePlotItem.setLabel('left', '')
-        self.imagePlotItem.setLabel('bottom', '')
+        self.imagePlotItem.setLabel('left', 'zmx')
+        self.imagePlotItem.setLabel('bottom', '502')
         self.colorLegendItem.setLabel('')
         # Set the histogram range and levels to finite values to prevent futher errors if this
         # function was called after an exception in self.drawContents
@@ -549,10 +584,66 @@ class PgImageSouthSea(AbstractInspector):
         self.config.updateTarget()
 
     @QtSlot(object)
+    def mouseClick(self, clickEvent):
+        """ Show data with time dim by viewPos, query from collector.
+            Draw line plot .
+        """
+        # pyqtgraph.GraphicsScene.mouseEvents.MouseClickEvent
+        # pprint(clickEvent.pos())
+        # pprint(clickEvent.scenePos())
+        clickPos = clickEvent.scenePos()
+        try:
+            # check_class(viewPos, QtCore.QPointF)
+            # show_data_point = False  # shows the data point as a circle in the cross hair plots
+            # self.crossPlotRow, self.crossPlotCol = None, None
+
+            # self.probeLabel.setText("<span style='color: #808080'>No data at cursor</span>")
+            # self.crossLineHorizontal.setVisible(False)
+            # self.crossLineVertical.setVisible(False)
+            # self.crossLineHorShadow.setVisible(False)
+            # self.crossLineVerShadow.setVisible(False)
+            #
+            # self.horCrossPlotItem.clear()
+            # self.verCrossPlotItem.clear()
+
+            if self.slicedArray is not None and self.viewBox.sceneBoundingRect().contains(clickPos):
+
+                # Calculate the row and column at the cursor.
+                scenePos = self.viewBox.mapSceneToView(clickPos)
+                row, col = round(scenePos.y()), round(scenePos.x())
+                # row, col = int(row), int(col)  # Needed in Python 2
+                nRows, nCols = self.slicedArray.shape
+
+                if (0 <= row < nRows) and (0 <= col < nCols):
+                    self.viewBox.setCursor(Qt.CrossCursor)
+
+                    # self.crossPlotRow, self.crossPlotCol = row, col
+                    index = tuple([row, col])
+                    # TODO 这个是经纬度，根据经纬度获取 所有时间点的数据
+                    valueStr = to_string(self.slicedArray.data[index],
+                                         masked=self.slicedArray.maskAt(index),
+                                         maskFormat='&lt;masked&gt;')
+                    pprint(valueStr)
+                    # txt = "({}, {}) = ({:d}, {:d}) {} {} = {}".format(
+                    #     self.collector.rtiInfo['x-dim'], self.collector.rtiInfo['y-dim'],
+                    #     col, row, RIGHT_ARROW, self.collector.rtiInfo['name'], valueStr)
+                    # self.probeLabel.setText(txt)
+
+        except Exception as ex:
+            # In contrast to _drawContents, this function is a slot and thus must not throw
+            # exceptions. The exception is logged. Perhaps we should clear the cross plots, but
+            # this could, in turn, raise exceptions.
+            if DEBUGGING:
+                raise
+            else:
+                logger.exception(ex)
+
+    @QtSlot(object)
     def mouseMoved(self, viewPos):
         """ Updates the probe text with the values under the cursor.
             Draws a vertical line and a symbol at the position of the probe.
         """
+        # pprint(viewPos)
         try:
             check_class(viewPos, QtCore.QPointF)
             show_data_point = False  # shows the data point as a circle in the cross hair plots
@@ -571,6 +662,7 @@ class PgImageSouthSea(AbstractInspector):
 
                 # Calculate the row and column at the cursor.
                 scenePos = self.viewBox.mapSceneToView(viewPos)
+                # pprint(scenePos)
                 row, col = round(scenePos.y()), round(scenePos.x())
                 row, col = int(row), int(col)  # Needed in Python 2
                 nRows, nCols = self.slicedArray.shape
