@@ -51,7 +51,7 @@ from argos.utils.defs import RIGHT_ARROW
 from argos.utils.masks import (ArrayWithMask, replaceMaskedValueWithFloat,
                                nanPercentileOfSubsampledArrayWithMask)
 
-from objbrowser import browse
+# from objbrowser import browse
 
 logger = logging.getLogger(__name__)
 
@@ -326,7 +326,7 @@ class PgImageSouthSea(AbstractInspector):
 
         # print("I like ", np.pi)
         self.viewBox.disableAutoRange(BOTH_AXES)
-        pprint(self.viewBox.background)
+        # pprint(self.viewBox.background)
 
         self.imageItem = pg.ImageItem()
         self.imageItem.setPos(-0.5, -0.5)  # Center on pixels (see pg.ImageView.setImage source code)
@@ -372,6 +372,7 @@ class PgImageSouthSea(AbstractInspector):
         self.verPlotAdded = False
 
         self.graphicsLayoutWidget = pg.GraphicsLayoutWidget()
+        # show all
         self.contentsLayout.addWidget(self.graphicsLayoutWidget)
 
         self.graphicsLayoutWidget.addItem(self.titleLabel, ROW_TITLE, COL_TITLE, colspan=3)
@@ -400,17 +401,19 @@ class PgImageSouthSea(AbstractInspector):
         self.imagePlotItem.scene().sigMouseMoved.connect(self.mouseMoved)
         self.imagePlotItem.scene().sigMouseClicked.connect(self.mouseClick)
 
-        tempImg = QPixmap(get_background_image())
-        self.graphicsPixmapItem = QGraphicsPixmapItem(tempImg)
+        # TRY add background image to plot,failed.
+
+        # tempImg = QPixmap(get_background_image())
+        # self.graphicsPixmapItem = QGraphicsPixmapItem(tempImg)
         # _scene = self.imagePlotItem.scene()
-        _scene = self.viewBox.scene()
+        # _scene = self.viewBox.scene()
 
         # _scene.addItem(self.graphicsPixmapItem)
         #
         # pprint(_scene)
         # browse(locals())
         # self.imagePlotItem.setObjectName("imageMainPlot")
-        self.viewBox.setObjectName("imageMainPlot")
+        # self.viewBox.setObjectName("imageMainPlot")
         # self.imagePlotItem.setStyleSheet(
         #     "background-image: url(" + get_background_image() + "); background-attachment: fixed")
 
@@ -450,8 +453,8 @@ class PgImageSouthSea(AbstractInspector):
         # Unfortunately PyQtGraph doesn't emit this signal when the image is cleared.
         self.imageItem.sigImageChanged.emit()
 
-        self.imagePlotItem.setLabel('left', 'zmx')
-        self.imagePlotItem.setLabel('bottom', '502')
+        self.imagePlotItem.setLabel('left', '')
+        self.imagePlotItem.setLabel('bottom', '')
         self.colorLegendItem.setLabel('')
         # Set the histogram range and levels to finite values to prevent futher errors if this
         # function was called after an exception in self.drawContents

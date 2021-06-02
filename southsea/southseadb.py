@@ -2,7 +2,7 @@ import sys
 import os
 import argos
 from argos.main import main, printInspectors
-from objbrowser import browse
+# from objbrowser import browse
 
 
 def run_app():
