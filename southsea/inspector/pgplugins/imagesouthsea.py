@@ -61,6 +61,8 @@ ROW_HOR_LINE, COL_HOR_LINE = 1, 0
 ROW_IMAGE, COL_IMAGE = 2, 0
 ROW_VER_LINE, COL_VER_LINE = 2, 1
 ROW_PROBE, COL_PROBE = 3, 0  # colspan = 2
+ROW_TIME, COL_TIME = 4, 0  # colspan = 2
+ROW_TIME_PROBE, COL_TIME_PROBE = 5, 0  # colspan = 2
 
 
 def get_background_image():
@@ -348,6 +350,10 @@ class PgImageSouthSea(AbstractInspector):
         self.verCrossPlotItem.showAxis('right', True)
         self.verCrossPlotItem.showAxis('left', False)
 
+        self.timeXYPlotItem = ArgosPgPlotItem()
+        self.timeXYPlotItem.setLabel('left', 'hs')
+        self.timeXYPlotItem.setLabel('bottom', 'time')
+
         self.crossPen = pg.mkPen("#BFBFBF")
         self.crossShadowPen = pg.mkPen([0, 0, 0, 100], width=3)
         self.crossLineHorShadow = pg.InfiniteLine(angle=0, movable=False, pen=self.crossShadowPen)
@@ -361,7 +367,8 @@ class PgImageSouthSea(AbstractInspector):
         self.imagePlotItem.addItem(self.crossLineVertical, ignoreBounds=True)
         self.imagePlotItem.addItem(self.crossLineHorizontal, ignoreBounds=True)
 
-        self.probeLabel = pg.LabelItem('xxxx', justify='left')
+        self.probeLabel = pg.LabelItem('', justify='left')
+        self.timeProbeLabel = pg.LabelItem('', justify='left')
 
         # Layout
 
@@ -379,6 +386,8 @@ class PgImageSouthSea(AbstractInspector):
         self.graphicsLayoutWidget.addItem(self.colorLegendItem, ROW_COLOR, COL_COLOR, rowspan=2)
         self.graphicsLayoutWidget.addItem(self.imagePlotItem, ROW_IMAGE, COL_IMAGE)
         self.graphicsLayoutWidget.addItem(self.probeLabel, ROW_PROBE, COL_PROBE, colspan=3)
+        self.graphicsLayoutWidget.addItem(self.timeXYPlotItem, ROW_TIME, COL_TIME, colspan=3)
+        self.graphicsLayoutWidget.addItem(self.timeProbeLabel, ROW_TIME_PROBE, COL_TIME_PROBE, colspan=3)
 
         # TODO 新增的 基于时间的 line plot 放这个地方
 
@@ -618,20 +627,48 @@ class PgImageSouthSea(AbstractInspector):
                 nRows, nCols = self.slicedArray.shape
 
                 if (0 <= row < nRows) and (0 <= col < nCols):
-                    self.viewBox.setCursor(Qt.CrossCursor)
+                    # self.viewBox.setCursor(Qt.CrossCursor)
 
                     # self.crossPlotRow, self.crossPlotCol = row, col
-                    index = tuple([row, col])
+                    # index = tuple([row, col])
                     # TODO 这个是经纬度，根据经纬度获取 所有时间点的数据
-                    valueStr = to_string(self.slicedArray.data[index],
-                                         masked=self.slicedArray.maskAt(index),
-                                         maskFormat='&lt;masked&gt;')
-                    pprint(valueStr)
+                    # valueStr = to_string(self.slicedArray.data[index],
+                    #                      masked=self.slicedArray.maskAt(index),
+                    #                      maskFormat='&lt;masked&gt;')
+                    # pprint(valueStr)
+
+                    timeXYdata = self.collector.rti[:, row, col]
+                    print(timeXYdata)
+                    connected = np.isfinite(timeXYdata)
+                    timePlotDataItem = self.config.crossPenCti.createPlotDataItem()
+                    timeXYdata = replaceMaskedValueWithFloat(timeXYdata, np.isinf(timeXYdata),
+                                                             np.nan, copyOnReplace=True)
+                    y = timeXYdata[:, None]
+                    z = timeXYdata[None, :]
+                    pprint(y)
+                    pprint(z)
+                    # x = nanPercentileOfSubsampledArrayWithMask(y, (0, 100), True)
+                    # pprint(x)
+                    timePlotDataItem.setData(timeXYdata, connect=connected)
+
+                    timePlotDataItem1 = pg.PlotDataItem(timeXYdata)
+                    self.timeXYPlotItem.clear()
+                    self.timeXYPlotItem.addItem(timePlotDataItem1)
                     # txt = "({}, {}) = ({:d}, {:d}) {} {} = {}".format(
                     #     self.collector.rtiInfo['x-dim'], self.collector.rtiInfo['y-dim'],
                     #     col, row, RIGHT_ARROW, self.collector.rtiInfo['name'], valueStr)
-                    # self.probeLabel.setText(txt)
+                    valueStr = np.mean(timeXYdata)
+                    txt = "({}, {}) = ({:d}, {:d}) {} {} = {} ; {} = {}".format(
+                        self.collector.rtiInfo['x-dim'],
+                        self.collector.rtiInfo['y-dim'],
+                        col, row, RIGHT_ARROW,
+                        "平均值",
+                        valueStr, "最大",
+                        timeXYdata.max())
 
+                    self.timeProbeLabel.setText(txt)
+
+                    del timeXYdata
         except Exception as ex:
             # In contrast to _drawContents, this function is a slot and thus must not throw
             # exceptions. The exception is logged. Perhaps we should clear the cross plots, but
@@ -678,7 +715,7 @@ class PgImageSouthSea(AbstractInspector):
                     valueStr = to_string(self.slicedArray.data[index],
                                          masked=self.slicedArray.maskAt(index),
                                          maskFormat='&lt;masked&gt;')
-
+                    # TODO add 最大最小均值 等信息：
                     txt = "({}, {}) = ({:d}, {:d}) {} {} = {}".format(
                         self.collector.rtiInfo['x-dim'], self.collector.rtiInfo['y-dim'],
                         col, row, RIGHT_ARROW, self.collector.rtiInfo['name'], valueStr)
